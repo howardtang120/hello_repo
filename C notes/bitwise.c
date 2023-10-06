@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void printBinary(int num) {
-    int bytes = 2;
+    int bytes = 4;
     
-    int mask = 1<<(8*bytes-1);                   //create a mask with only a single "1" bit
+    unsigned int mask = 1<<(8*bytes-1);      //create a mask with only a single "1" bit
     printf("Mask %d\n\n", mask);
     printf("%d in binary is:\n", num);
 
@@ -21,7 +21,7 @@ void printBinary(int num) {
 }
 
 int main() {
-    int num = 40;
+    int num = 266;                //00000000 00000000 00000001 00001010
     printBinary(num);
     printf("\n\nreturn 0");
 }
