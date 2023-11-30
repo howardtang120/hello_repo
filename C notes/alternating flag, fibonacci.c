@@ -13,9 +13,9 @@ void print_fibonacci(int n){
     }
 
     for (int i=3; i<n; i++){
-        a = !a;
-        arr[a] += arr[!a];
-        printf("%d: %d\n", i, arr[a]);
+        a = !a;                        //changes the value between 0 and 1 each loop
+        arr[a] += arr[!a];            // Can be used to access alternating data
+        printf("%d: %d\n", i, arr[a]);    // Or call alternating functions, like Minimax
     }
 }
 
